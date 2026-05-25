@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Chào mừng bạn đến với cửa hàng",
+    "content": "Chào mừng bạn đến với cửa hàng của chúng tôi!",
+    "type": "global",
+    "category": "system",
+    "icon": "megaphone",
+    "status": "active",
+    "startDate": "2024-02-22T08:00",
+    "endDate": "2024-03-22T08:00",
+    "primaryColor": "#f97316",
+    "secondaryColor": "#ffffff",
+    "showDateTime": true
+  },
+  {
+    "id": 2,
+    "title": "Ưu đãi đặc biệt",
+    "content": "Giảm giá 10% cho tất cả sản phẩm trong tuần này",
+    "type": "automated",
+    "category": "transaction",
+    "icon": "gift",
+    "status": "scheduled",
+    "startDate": "2024-02-23T00:00",
+    "endDate": "2024-02-29T23:59",
+    "primaryColor": "#4f46e5",
+    "secondaryColor": "#ffffff",
+    "showDateTime": false
+  }
+]

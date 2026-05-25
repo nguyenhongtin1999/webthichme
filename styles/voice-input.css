@@ -1,0 +1,161 @@
+/* Waveform animation for voice input */
+@keyframes waveform {
+  0%, 100% {
+    height: 8px;
+    opacity: 0.4;
+  }
+  50% {
+    height: 40px;
+    opacity: 1;
+  }
+}
+
+/* Alternative waveform with arc effect */
+@keyframes waveformArc {
+  0% {
+    transform: scaleY(0.4);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleY(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0.4;
+  }
+}
+
+.waveform-bar {
+  min-height: 8px;
+  transform-origin: bottom;
+}
+
+/* Smoothly animated waveform bars */
+.waveform-bar {
+  transition: all 0.1s ease-in-out;
+}
+
+/* Arc wave container */
+.voice-wave-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 120px;
+}
+
+/* Individual arc wave bar */
+.voice-wave-bar {
+  width: 4px;
+  min-height: 12px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #8b5cf6 0%, #c4b5fd 100%);
+  transform-origin: bottom;
+  animation: waveformArc 0.6s ease-in-out infinite;
+}
+
+.voice-wave-bar:nth-child(1) { animation-delay: 0s; }
+.voice-wave-bar:nth-child(2) { animation-delay: 0.08s; }
+.voice-wave-bar:nth-child(3) { animation-delay: 0.16s; }
+.voice-wave-bar:nth-child(4) { animation-delay: 0.24s; }
+.voice-wave-bar:nth-child(5) { animation-delay: 0.32s; }
+.voice-wave-bar:nth-child(6) { animation-delay: 0.40s; }
+.voice-wave-bar:nth-child(7) { animation-delay: 0.32s; }
+.voice-wave-bar:nth-child(8) { animation-delay: 0.24s; }
+.voice-wave-bar:nth-child(9) { animation-delay: 0.16s; }
+.voice-wave-bar:nth-child(10) { animation-delay: 0.08s; }
+.voice-wave-bar:nth-child(11) { animation-delay: 0s; }
+
+/* Dark mode adjustments */
+:root {
+  --waveform-color-light: #8b5cf6;
+  --waveform-color-dark: #a78bfa;
+}
+
+.dark-mode .voice-wave-bar {
+  background: linear-gradient(180deg, #a78bfa 0%, #ddd6fe 100%);
+}
+
+/* Pulse animation for mic button when listening */
+@keyframes micPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+}
+
+.mic-listening {
+  animation: micPulse 1.5s ease-out infinite;
+}
+
+/* Voice input modal animations */
+@keyframes voiceModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.voice-modal {
+  animation: voiceModalIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Listening pulse effect for background */
+@keyframes listeningPulse {
+  0%, 100% {
+    background: rgba(139, 92, 246, 0.05);
+  }
+  50% {
+    background: rgba(139, 92, 246, 0.15);
+  }
+}
+
+.listening-state {
+  animation: listeningPulse 1.5s ease-in-out infinite;
+}
+
+/* Text animation when transcribing */
+@keyframes textFade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.transcribed-text {
+  animation: textFade 0.3s ease-out forwards;
+}
+
+/* Scroll animation for long transcripts */
+.transcript-scroll {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
+.transcript-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.transcript-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.transcript-scroll::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 2px;
+}
+
+.transcript-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
+}

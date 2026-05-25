@@ -1,0 +1,19 @@
+/* Main header styles - imports all modular CSS files */
+@import "./modal.css";
+@import "./favorites.css";
+@import "./base.css";
+@import "./notifications.css";
+@import "./layout.css";
+@import "./cart.css";
+@import "./components.css";
+@import "./animations.css";
+/* Adding imports for additional CSS modules */
+@import "./tags.css";
+@import "./video.css";
+@import "./typography.css";
+@import "./utilities.css";
+@import "./layout-extended.css";
+/* Adding panels.css import for panel component styles */
+@import "./panels.css";
+
+/* Additional header-specific styles can be added here */

@@ -1,0 +1,564 @@
+/* Dark/Light Mode Toggle Switch - Compact Size */
+.switch {
+  display: block;
+  --width-of-switch: 2.2em;
+  --height-of-switch: 1.3em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 0.9em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.2em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon, 0.9em);
+  width: var(--size-of-icon, 0.9em);
+  border-radius: 20px;
+  left: var(--slider-offset, 0.2em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon, 0.9em) + var(--slider-offset, 0.2em)));
+  background: #303136;
+  /* precisely adjusted shadow values for compact size while maintaining perfect moon crescent */
+  box-shadow: inset -1.5px -1px 3px -1px #8983f7, inset -6px -2.5px 0 0 #a3dafb;
+}
+
+/* Enhanced Dark Mode Styles */
+body.dark-mode {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+  color: #e2e8f0;
+  transition: all 0.5s ease;
+}
+
+/* Header Dark Mode */
+body.dark-mode header {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  box-shadow: 0 4px 20px rgba(79, 70, 229, 0.3);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Search Input Dark Mode */
+body.dark-mode #searchInput {
+  background: rgba(30, 27, 75, 0.8) !important;
+  color: #e2e8f0 !important;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+body.dark-mode #searchInput::placeholder {
+  color: #a78bfa !important;
+}
+
+body.dark-mode #searchInput:focus {
+  ring-color: #8b5cf6 !important;
+  border-color: #8b5cf6 !important;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1) !important;
+}
+
+/* Header Buttons Dark Mode */
+body.dark-mode header button {
+  color: #a78bfa !important;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode header button:hover {
+  color: #c4b5fd !important;
+  transform: translateY(-1px);
+  filter: drop-shadow(0 4px 8px rgba(139, 92, 246, 0.3));
+}
+
+/* Side Menu Dark Mode */
+body.dark-mode #sideMenu {
+  background: linear-gradient(180deg, #1e1b4b 0%, #1f2937 100%);
+  box-shadow: 4px 0 30px rgba(0, 0, 0, 0.5);
+  border-right: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Dark mode mystical purple gradient for side menu header */
+body.dark-mode #sideMenu .bg-gradient-to-r {
+  background: linear-gradient(135deg, #0c0a1e 0%, #1e1b4b 30%, #312e81 60%, #4c1d95 100%) !important;
+  box-shadow: 0 4px 25px rgba(79, 70, 229, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+/* Add subtle sparkle effect to dark mode header */
+body.dark-mode #sideMenu .bg-gradient-to-r::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(2px 2px at 20px 15px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 40px 25px, rgba(129, 140, 248, 0.4), transparent),
+    radial-gradient(1px 1px at 80px 10px, rgba(255, 255, 255, 0.2), transparent);
+  background-repeat: no-repeat;
+  border-radius: inherit;
+  pointer-events: none;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+/* Menu Items Dark Mode */
+body.dark-mode .menu-item {
+  color: #e2e8f0 !important;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .menu-item:hover {
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%) !important;
+  color: #c4b5fd !important;
+  transform: translateX(4px);
+  border-left: 3px solid #8b5cf6;
+}
+
+body.dark-mode .menu-item i {
+  color: #a78bfa !important;
+}
+
+body.dark-mode .menu-item:hover i {
+  color: #c4b5fd !important;
+}
+
+/* Panels Dark Mode */
+body.dark-mode #notificationPanel,
+body.dark-mode #favoritesPanel,
+body.dark-mode #cartPanel,
+body.dark-mode #accountPanel {
+  background: linear-gradient(135deg, #1e1b4b 0%, #1f2937 100%) !important;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+}
+
+body.dark-mode #notificationPanel h3,
+body.dark-mode #favoritesPanel h3,
+body.dark-mode #cartPanel h3,
+body.dark-mode #accountPanel h3 {
+  color: #e2e8f0 !important;
+  bottom: 1px solid rgba(139, 92, 246, 0.2) !important; /* da xoa border */
+}
+
+body.dark-mode #notificationPanel .border-b,
+body.dark-mode #favoritesPanel .border-b,
+body.dark-mode #cartPanel .border-b,
+body.dark-mode #accountPanel .border-b {
+  border-color: rgba(139, 92, 246, 0.1) !important;
+}
+
+/* Panel Content Dark Mode */
+body.dark-mode #notificationPanel p,
+body.dark-mode #favoritesPanel p,
+body.dark-mode #cartPanel p,
+body.dark-mode #accountPanel p {
+  color: #cbd5e0 !important;
+}
+
+body.dark-mode #notificationPanel .text-gray-500,
+body.dark-mode #favoritesPanel .text-gray-500,
+body.dark-mode #cartPanel .text-gray-500,
+body.dark-mode #accountPanel .text-gray-500 {
+  color: #9ca3af !important;
+}
+
+/* Account Panel Links Dark Mode */
+body.dark-mode #accountPanel a {
+  color: #cbd5e0 !important;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode #accountPanel a:hover {
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%) !important;
+  color: #c4b5fd !important;
+  transform: translateX(2px);
+}
+
+/* Buttons Dark Mode */
+body.dark-mode button {
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .bg-orange-500 {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+body.dark-mode .bg-orange-500:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+body.dark-mode .hover\:bg-orange-600:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%) !important;
+}
+
+/* Search Results Dark Mode */
+body.dark-mode #searchResults {
+  background: linear-gradient(135deg, #1e1b4b 0%, #1f2937 100%) !important;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+}
+
+/* Overlay Dark Mode */
+body.dark-mode #menuOverlay {
+  background: rgba(15, 15, 35, 0.8) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* Dark Mode Styles for Rewards Page */
+body.dark-mode .rewards-container {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+body.dark-mode [class*="points-input-section"],
+body.dark-mode [class*="checkin-section"],
+body.dark-mode [class*="tasks-list"] {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+}
+
+/* Removed invalid :has() and :contains() CSS selectors - rely on component classes instead */
+body.dark-mode .points-input-section input,
+body.dark-mode .points-input-section textarea {
+  background: rgba(30, 27, 75, 0.5) !important;
+  color: #e2e8f0 !important;
+  border: 1px solid rgba(139, 92, 246, 0.3) !important;
+}
+
+body.dark-mode .points-input-section input::placeholder,
+body.dark-mode .points-input-section textarea::placeholder {
+  color: #a78bfa !important;
+}
+
+body.dark-mode .checkin-section {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+  border: 1px solid rgba(129, 140, 248, 0.2) !important;
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .checkin-section h3,
+body.dark-mode .checkin-section p {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .checkin-day {
+  background: rgba(79, 70, 229, 0.1) !important;
+  border: 1px solid rgba(139, 92, 246, 0.2) !important;
+  color: #cbd5e0 !important;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .checkin-day:hover {
+  background: rgba(79, 70, 229, 0.2) !important;
+  border-color: rgba(139, 92, 246, 0.4) !important;
+}
+
+body.dark-mode .checkin-day.completed {
+  background: rgba(99, 102, 241, 0.3) !important;
+  border-color: #6366f1 !important;
+}
+
+body.dark-mode .checkin-day.completed span {
+  color: #a78bfa !important;
+}
+
+body.dark-mode .gift-item {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+  border: 1px solid rgba(129, 140, 248, 0.2) !important;
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .gift-item:hover {
+  border-color: rgba(139, 92, 246, 0.4) !important;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.2) !important;
+}
+
+body.dark-mode .gift-item h3 {
+  color: #cbd5e0 !important;
+}
+
+body.dark-mode .redeem-button {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .redeem-button:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%) !important;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4) !important;
+}
+
+body.dark-mode .redeem-button:disabled {
+  background: rgba(71, 85, 105, 0.5) !important;
+  cursor: not-allowed !important;
+}
+
+body.dark-mode .tasks-list {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+  border: 1px solid rgba(129, 140, 248, 0.2) !important;
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .tasks-list h3 {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .task-item {
+  background: rgba(79, 70, 229, 0.1) !important;
+  border: 1px solid rgba(139, 92, 246, 0.2) !important;
+  color: #cbd5e0 !important;
+}
+
+body.dark-mode .task-item:hover {
+  background: rgba(79, 70, 229, 0.15) !important;
+  border-color: rgba(139, 92, 246, 0.4) !important;
+}
+
+body.dark-mode .task-item p {
+  color: #cbd5e0 !important;
+}
+
+body.dark-mode .task-item span {
+  color: #a78bfa !important;
+}
+
+body.dark-mode .complete-task-button {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .complete-task-button:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4) !important;
+}
+
+body.dark-mode .complete-task-button:disabled {
+  background: rgba(71, 85, 105, 0.5) !important;
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}
+
+/* Light Mode Specific Styles */
+body:not(.dark-mode) .space-button {
+  background: linear-gradient(45deg, #ea580c, #f97316);
+  box-shadow: 0 4px 10px rgba(234, 88, 12, 0.3), 0 0 10px rgba(249, 115, 22, 0.15), inset 0 0 10px
+    rgba(249, 115, 22, 0.05);
+  /* Remove text-shadow for clean look */
+  text-shadow: none;
+}
+
+body:not(.dark-mode) .button-container {
+  background: linear-gradient(90deg, #f97316, #fbbf24, #ef4444, #f97316);
+  background-size: 400% 400%;
+  animation: gradientBorderLight 15s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
+}
+
+body:not(.dark-mode) .space-button span {
+  /* Clean white text without glow effects */
+  filter: none;
+  text-shadow: none;
+  color: #ffffff;
+}
+
+body:not(.dark-mode) .space-button .login-icon {
+  /* Clean icon without glow */
+  filter: none;
+}
+
+body:not(.dark-mode) .space-button:hover {
+  background: linear-gradient(45deg, #c2410c, #ea580c);
+  box-shadow: 0 6px 12px rgba(234, 88, 12, 0.4), 0 0 20px rgba(249, 115, 22, 0.25), inset 0 0 15px
+    rgba(249, 115, 22, 0.1);
+}
+
+body:not(.dark-mode) .space-button:hover span {
+  /* Clean hover effect without glow */
+  filter: none;
+  text-shadow: none;
+  color: #ffffff;
+}
+
+body:not(.dark-mode) .space-button:hover .login-icon {
+  opacity: 1;
+  transform: scale(1.1);
+  filter: none;
+}
+
+body:not(.dark-mode) .button-container:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.3), 0 0 8px rgba(249, 115, 22, 0.15);
+  animation: gradientBorderLight 8s ease-in-out infinite;
+}
+
+/* Hide all particle effects in light mode */
+body:not(.dark-mode) .space-button::before {
+  opacity: 0;
+}
+
+body:not(.dark-mode) .space-button::after {
+  opacity: 0;
+}
+
+body:not(.dark-mode) .space-button .bright-particles {
+  opacity: 0;
+}
+
+body:not(.dark-mode) .space-button:hover::before {
+  opacity: 0;
+}
+
+body:not(.dark-mode) .space-button:hover::after {
+  opacity: 0;
+}
+
+body:not(.dark-mode) .space-button:hover .bright-particles {
+  opacity: 0;
+}
+
+@keyframes gradientBorderLight {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Add specific styling for favorites panel toggle button in dark mode */
+body.dark-mode #favoritesPanel .relative.bg-muted > div:first-child {
+  background-color: #4b5563 !important;
+}
+
+/* Ensure the toggle button slider stays gray in dark mode */
+body.dark-mode #favoritesPanel .bg-muted {
+  background-color: rgba(75, 85, 99, 0.3) !important;
+}
+
+body.dark-mode #favoritesPanel .absolute.top-1.left-1.w-1\/2.h-7 {
+  background-color: #4b5563 !important;
+}
+
+/* Override any potential white background on toggle button in dark mode */
+body.dark-mode .absolute.top-1.left-1.w-1\/2.h-7.bg-orange-500 {
+  background-color: #4b5563 !important;
+}
+
+/* Add white text color for unselected toggle buttons (articles/videos) in dark mode */
+body.dark-mode #favoritesPanel .relative.bg-muted button {
+  color: #ffffff !important;
+}
+
+body.dark-mode #favoritesPanel .relative.bg-muted button.text-foreground {
+  color: #ffffff !important;
+}
+
+body.dark-mode #favoritesPanel .dark\:text-slate-300 {
+  color: #ffffff !important;
+}
+
+/* Add dark violet background for Favorites Panel tabs (Sản phẩm, Apps, Yêu thích) in dark mode */
+body.dark-mode #favoritesPanel .flex.border-b.border-border {
+  background: transparent !important;
+}
+
+body.dark-mode #favoritesPanel .border-b-2 {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode #favoritesPanel .border-b-2.text-muted-foreground {
+  color: #a78bfa !important;
+}
+
+body.dark-mode #favoritesPanel .border-b-2.text-orange-500 {
+  color: #c4b5fd !important;
+  border-color: #c4b5fd !important;
+}
+
+body.dark-mode #favoritesPanel .border-b-2:hover {
+  color: #c4b5fd !important;
+}
+
+/* Update "Xem thêm" (View more) button - remove white background and make text purple */
+body.dark-mode #favoritesPanel button[onclick*="favorites"],
+body.dark-mode #favoritesPanel .border-t.border-border button {
+  color: #a78bfa !important;
+  background: transparent !important;
+}
+
+body.dark-mode #favoritesPanel .border-t.border-border button:hover {
+  color: #c4b5fd !important;
+  background: transparent !important;
+}
+
+/* Add click state styling for favorite items in dark mode */
+body.dark-mode .favorite-item {
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .favorite-item:active {
+  background: rgba(75, 85, 99, 0.4);
+  border-radius: 8px;
+}
+
+/* Add dark mode hover effect for favorite items - gray background */
+body.dark-mode .favorite-item:hover {
+  background-color: rgba(107, 114, 128, 0.4) !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Remove light mode white background and keep only gray */
+.favorite-item {
+  transition: all 0.3s ease;
+}
+
+.favorite-item:active {
+  background: rgba(120, 113, 108, 0.3);
+  border-radius: 8px;
+}
+
+/* Update favorites panel footer border for dark mode - reduce thickness and match theme */
+body.dark-mode #favoritesPanel .border-t.border-border {
+  border-color: rgba(139, 92, 246, 0.15) !important;
+  border-width: 0.5px !important;
+}

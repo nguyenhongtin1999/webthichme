@@ -1,0 +1,226 @@
+/* Auto-generated split from hea.css on 2025-08-31T02:36:55 */
+/* Added position: relative to .favorite-item to enable absolute positioning for remove button */
+.favorite-item {
+  position: relative;
+}
+
+/* Updated to match cart delete button: smaller border, simpler frosted glass, better transparency */
+.remove-favorite-btn {
+  position: absolute;
+  top: var(--remove-btn-top, 6px);
+  right: var(--remove-btn-right, 6px);
+  width: var(--remove-btn-size, 32px);
+  height: var(--remove-btn-size, 32px);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(229, 231, 235, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.remove-favorite-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #ef4444;
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.remove-favorite-btn svg {
+  width: var(--remove-btn-icon-size, 16px);
+  height: var(--remove-btn-icon-size, 16px);
+  transition: all 0.2s ease;
+}
+
+.remove-favorite-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Simplified frosted glass - matching cart button style with minimal blur and transparency */
+.remove-favorite-btn.frosted-glass {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.remove-favorite-btn.frosted-glass:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15), 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark mode frosted glass - simpler and more transparent */
+.dark .remove-favorite-btn.frosted-glass {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dark .remove-favorite-btn.frosted-glass:hover {
+  background: rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles cho các loại icon khác nhau */
+.remove-favorite-btn.product-remove {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.remove-favorite-btn.product-remove:hover {
+  background: rgba(254, 242, 242, 1);
+  border-color: #ef4444;
+}
+
+.remove-favorite-btn.app-remove {
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.remove-favorite-btn.app-remove:hover {
+  background: rgba(239, 246, 255, 1);
+  border-color: #3b82f6;
+}
+
+.remove-favorite-btn.saved-remove {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.remove-favorite-btn.saved-remove:hover {
+  background: rgba(236, 253, 245, 1);
+  border-color: #10b981;
+}
+
+/* Styles cho thẻ sản phẩm trong panel yêu thích */
+.product-tags {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2px; /* Reduced gap from 4px to 2px to bring tags closer together */
+  margin: 2px 0 4px 0;
+  max-width: calc(100% - 2px);
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 18px; /* Reduced min-height from 20px to 18px for more compact display */
+}
+
+.product-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px; /* Reduced padding from 4px 8px to 2px 6px for more compact tags */
+  border-radius: 10px; /* Reduced border-radius from 12px to 10px */
+  font-size: 9px; /* Reduced font-size from 10px to 9px */
+  font-weight: 600;
+  gap: 2px; /* Reduced gap from 3px to 2px */
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Reduced shadow for more compact appearance */
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: fit-content;
+  max-width: 70px; /* Reduced max-width from 85px to 70px for shorter tags */
+  height: 18px; /* Reduced height from 22px to 18px */
+  line-height: 1.1; /* Reduced line-height from 1.2 to 1.1 */
+  letter-spacing: 0.01em; /* Reduced letter-spacing from 0.02em to 0.01em */
+}
+
+/* Hiệu ứng cho thẻ Giảm giá */
+.product-tag.bg-red-500 {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+/* Hiệu ứng cho thẻ Hàng Mới */
+.product-tag.bg-green-500 {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+/* Hiệu ứng cho thẻ Thịnh Hành */
+.product-tag.bg-blue-500 {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+/* Hiệu ứng cho thẻ Bán Chạy */
+.product-tag.bg-purple-500 {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+/* Hiệu ứng cho thẻ Độc Quyền */
+.product-tag.bg-yellow-500 {
+  background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+  color: #1f2937 !important;
+}
+
+/* Hiệu ứng cho thẻ Giới Hạn */
+.product-tag.bg-gray-600 {
+  background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+}
+
+.product-tag.bg-yellow-500 {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Đảm bảo text không bị wrap trong thẻ */
+.product-tag {
+  max-width: 80px;
+}
+
+.product-tag span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Hiệu ứng hover cho từng loại thẻ */
+.product-tag.bg-red-500:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+.product-tag.bg-green-500:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.product-tag.bg-blue-500:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+}
+
+.product-tag.bg-orange-500:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+}
+
+.product-tag.bg-purple-500:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+}
+
+.product-tag.bg-yellow-500:hover {
+  background: linear-gradient(135deg, #ca8a04 0%, #a16207 100%);
+}
+
+.product-tag.bg-gray-600:hover {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+}
+
+/* Đảm bảo text trong thẻ không bị overflow */
+.product-tag span {
+  display: inline-block;
+  max-width: calc(100% - 10px); /* Reduced from 12px to 10px to account for smaller icon */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* Cải thiện hiển thị icon trong thẻ */
+.product-tag i {
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}

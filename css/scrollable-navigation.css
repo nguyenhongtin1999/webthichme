@@ -1,0 +1,30 @@
+/* Scrollable Navigation Styles */
+.scrollable-nav {
+  /* Custom scrollbar for webkit browsers */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.scrollable-nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable-nav::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.scrollable-nav::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Ensure smooth scrolling */
+.scrollable-nav {
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}

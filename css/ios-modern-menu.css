@@ -1,0 +1,198 @@
+/* iOS Modern Menu Styles */
+.ios-modern-menu {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif;
+  padding: 0 16px;
+}
+
+.ios-modern-menu__section {
+  margin-bottom: 18px;
+}
+
+.ios-modern-menu__header {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8e8e93;
+  margin: 0 0 6px 4px;
+  letter-spacing: -0.08px;
+  text-transform: uppercase;
+}
+
+.ios-modern-menu__card-group {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 3px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.ios-modern-menu__card {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 1px 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: ios-modern-fadeInUp 0.35s cubic-bezier(0.28, 0.11, 0.32, 1) forwards;
+  /* added position relative and left border for underline effect */
+  position: relative;
+  border-left: 3px solid transparent;
+  transition: transform 0.25s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.25s ease, box-shadow 0.25s ease,
+    border-left-color 0.3s ease;
+}
+
+.ios-modern-menu__card:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  /* added orange left border on hover for light mode */
+  border-left-color: orange;
+}
+
+.ios-modern-menu__card:active {
+  transform: scale(0.96) translateY(-2px);
+  transition: transform 0.1s ease;
+}
+
+.ios-modern-menu__card--primary {
+  background-color: rgba(255, 69, 58, 0.08);
+}
+
+.ios-modern-menu__card--primary:hover {
+  background-color: rgba(255, 69, 58, 0.12);
+}
+
+.ios-modern-menu__icon {
+  width: 38px;
+  height: 38px;
+  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  transition: transform 0.25s cubic-bezier(0.28, 0.11, 0.32, 1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+.ios-modern-menu__card:hover .ios-modern-menu__icon {
+  transform: scale(1.08);
+}
+
+.ios-modern-menu__card:active .ios-modern-menu__icon {
+  transform: scale(0.96) translateY(-2px);
+  transition: transform 0.1s ease;
+}
+
+.ios-modern-menu__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ios-modern-menu__title {
+  font-size: 17px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0;
+  letter-spacing: -0.34px;
+  line-height: 1.2;
+}
+
+/* Added dark mode styles for iOS Modern Menu */
+/* Dark Mode Styles */
+body.dark-mode .ios-modern-menu__header {
+  color: #a78bfa;
+}
+
+body.dark-mode .ios-modern-menu__card-group {
+  background-color: rgba(30, 27, 75, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .ios-modern-menu__card {
+  color: #e2e8f0;
+  transition: transform 0.25s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+body.dark-mode .ios-modern-menu__card:hover {
+  background-color: rgba(139, 92, 246, 0.1);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+  transform: translateY(-2px);
+  border-left-color: #a78bfa;
+  /* added purple border for dark mode hover state */
+}
+
+body.dark-mode .ios-modern-menu__card--primary {
+  background-color: rgba(139, 92, 246, 0.15);
+}
+
+body.dark-mode .ios-modern-menu__card--primary:hover {
+  background-color: rgba(139, 92, 246, 0.2);
+}
+
+body.dark-mode .ios-modern-menu__title {
+  color: #e2e8f0;
+}
+
+body.dark-mode .ios-modern-menu__icon {
+  box-shadow: 0 3px 10px rgba(139, 92, 246, 0.3);
+}
+
+body.dark-mode .ios-modern-menu__card:hover .ios-modern-menu__icon {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 8px rgba(139, 92, 246, 0.4));
+}
+
+/* Staggered animation delays */
+.ios-modern-menu__card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.ios-modern-menu__card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.ios-modern-menu__card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.ios-modern-menu__card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.ios-modern-menu__card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.ios-modern-menu__card:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.ios-modern-menu__card:nth-child(7) {
+  animation-delay: 0.35s;
+}
+.ios-modern-menu__card:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+@keyframes ios-modern-fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* iOS Modern Menu adjustments for scrollable container */
+.ios-modern-menu {
+  padding: 16px 16px 24px 16px; /* Add bottom padding for better spacing */
+}
+
+/* Prevent scroll conflicts with menu items */
+.ios-modern-menu__card {
+  touch-action: manipulation; /* Prevents zoom on double tap */
+  user-select: none; /* Prevents text selection during scroll */
+}
+
+/* Ensure proper spacing at the bottom */
+.ios-modern-menu__section:last-child {
+  margin-bottom: 8px;
+}

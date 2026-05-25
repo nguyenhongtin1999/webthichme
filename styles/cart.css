@@ -1,0 +1,180 @@
+/* Auto-generated split from hea.css on 2025-08-31T02:36:55 */
+.coin-icon {
+  color: gold;
+  margin-right: 5px;
+}
+
+/* Thêm CSS mới cho cartContainer để giới hạn chiều cao hiển thị */
+#cartContainer {
+  max-height: 270px; /* Reduced from 290px to 270px */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #e5e7eb transparent;
+}
+
+#cartContainer::-webkit-scrollbar {
+  width: 4px;
+}
+
+#cartContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#cartContainer::-webkit-scrollbar-thumb {
+  background-color: #e5e7eb;
+  border-radius: 4px;
+}
+
+#cartContainer:hover::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+}
+
+/* Enhanced badge styles for discount and free shipping */
+.discount-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #f97316 100%);
+  color: white;
+  box-shadow: 0 2px 4px rgba(249, 115, 22, 0.2);
+  position: relative;
+}
+
+.shipping-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+  position: relative;
+}
+
+.discount-badge i,
+.shipping-badge i {
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+
+/* Select all checkbox styling */
+.custom-checkbox {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  pointer-events: auto;
+}
+
+.custom-checkbox:hover .checkmark {
+  border-color: #f97316;
+  background-color: #fff8f3;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #f97316;
+  border-color: #f97316;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Select all checkbox styling */
+.select-all-container {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  /* Removed hardcoded background-color to allow Tailwind classes (bg-gray-100 for light mode, bg-amber-800 for dark mode) */
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.select-all-container .checkmark {
+  margin-right: 8px;
+}
+
+.discount-badge,
+.shipping-badge {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.discount-badge.removing,
+.shipping-badge.removing {
+  opacity: 0;
+}
+
+/* Updated badge spacing and container for better control */
+/* Tags container with controlled gap */
+.tags-container {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Make sure badges don't shrink and have no individual margins */
+.discount-badge,
+.shipping-badge {
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin: 0; /* Remove all margins, let container gap handle spacing */
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Added CSS for delete tag button to ensure proper visibility and positioning */
+.delete-tag-btn {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  z-index: 20;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.delete-tag-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  transform: scale(1.1);
+}
+
+.delete-tag-btn svg {
+  width: 8px;
+  height: 8px;
+  color: #ef4444;
+}
+
+/* Show delete button on tag hover */
+.discount-badge:hover .delete-tag-btn,
+.shipping-badge:hover .delete-tag-btn,
+.group:hover .delete-tag-btn {
+  opacity: 1;
+}

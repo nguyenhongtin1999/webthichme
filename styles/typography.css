@@ -1,0 +1,30 @@
+/* Auto-generated split from hea.css on 2025-08-31T02:36:55 */
+/* Removed Google Fonts @import to fix loading error */
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.welcome-text {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.logo-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 15px;
+}
+
+.logo-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.total-points {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}

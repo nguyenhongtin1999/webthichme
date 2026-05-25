@@ -1,0 +1,224 @@
+/* Auto-generated split from hea.css on 2025-08-31T02:36:55 */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+  text-align: center;
+  min-width: 120px;
+}
+
+.button-primary {
+  background-color: white;
+  color: #ff8c00;
+}
+
+.button-primary:hover {
+  background-color: #ffe6cc;
+}
+
+.button-secondary {
+  background-color: #ff4500;
+  color: white;
+}
+
+.button-secondary:hover {
+  background-color: #ff6347;
+}
+
+.points-form .button {
+  padding: 10px 18px;
+  font-size: 14px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.action-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.action-button i {
+  margin-right: 8px;
+}
+
+.icon-button {
+  transition: color 0.3s ease;
+}
+
+.icon-button:hover,
+.icon-button.active {
+  color: #f97316;
+}
+
+.panel-button {
+  position: relative;
+}
+
+/* Enhanced Add Code Button */
+.add-code-btn {
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ff9a4d 0%, #f97316 100%);
+  color: white !important;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.add-code-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+  background: linear-gradient(135deg, #ffb74d 0%, #ff8c00 100%);
+}
+
+.add-code-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 4px rgba(249, 115, 22, 0.3);
+}
+
+.add-code-btn.icon-only {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.add-code-btn.icon-only i {
+  margin-right: 0;
+}
+
+/* Update quantity button styles */
+.quantity-btn {
+  transition: all 0.2s ease;
+}
+
+.quantity-btn:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.quantity-btn.plus:hover {
+  background-color: #dcfce7;
+  color: #10b981;
+  border-color: #10b981;
+}
+
+.quantity-btn.minus:hover:not(:disabled) {
+  background-color: #fee2e2;
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+.quantity-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.remove-cart-item {
+  z-index: 10;
+  backdrop-filter: blur(2px);
+  transition: all 0.2s ease;
+}
+
+.remove-cart-item:hover {
+  transform: scale(1.1);
+  background-color: #fee2e2;
+  border-color: #ef4444;
+}
+
+/* View detail button styles */
+.view-detail-btn {
+  white-space: nowrap;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  font-size: 11px;
+  letter-spacing: 0.01em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  height: 1.5rem;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.view-detail-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.view-detail-btn:active {
+  transform: translateY(0);
+}
+
+/* Find the styles for eye view button and update them */
+/* Styles for eye view button */
+.view-eye-btn {
+  transition: all 0.2s ease;
+  border-radius: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.view-eye-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  background-color: #e5e7eb;
+}
+
+.view-eye-btn:active {
+  transform: translateY(0);
+}
+
+/* Add code button should also not shrink */
+.add-code-btn {
+  flex-shrink: 0;
+}
+
+/* Điều chỉnh cho các button action khác (nếu có) */
+.favorite-item .action-buttons {
+  margin-right: 8px;
+}

@@ -1,0 +1,54 @@
+/* Auto-generated split from hea.css on 2025-08-31T02:36:55 */
+/* Video Play Icon Styles - No animations or effects */
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.video-play-button {
+  width: 24px;
+  height: 24px;
+  background: rgb(194, 194, 194, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  /* No transitions or animations */
+}
+
+.video-play-icon {
+  width: 12px !important;
+  height: 12px !important;
+  color: #ff6600 !important;
+  /* Override any existing icon styles */
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Ensure no hover effects on video play elements */
+.video-play-overlay:hover,
+.video-play-button:hover,
+.video-play-icon:hover {
+  transform: none !important;
+  scale: none !important;
+  transition: none !important;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 640px) {
+  .video-play-button {
+    width: 20px;
+    height: 20px;
+  }
+
+  .video-play-icon {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}

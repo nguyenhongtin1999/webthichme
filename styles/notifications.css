@@ -1,0 +1,8 @@
+/* Auto-generated split from hea.css on 2025-08-31T02:36:55 */
+/* Modifier cho badge có text "9+" */
+.notification-badge.overflow {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  line-height: 0;
+}

@@ -1,0 +1,83 @@
+/* Auto-generated split from hea.css on 2025-08-31T02:36:55 */
+#pointsCode {
+  width: 180px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 9999px;
+  font-size: 14px;
+}
+
+.points-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkmark {
+  position: relative;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1.5px solid #ddd;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: all 0.2s ease;
+}
+
+.delete-tag-btn {
+  transition: all 0.2s ease;
+}
+
+.delete-tag-btn:hover {
+  transform: scale(1.2);
+  background-color: #fee2e2;
+}
+
+.group:hover .delete-tag-btn {
+  opacity: 1;
+}
+
+/* Utility classes để điều chỉnh vị trí nhanh */
+.remove-btn-top-left {
+  --remove-btn-top: 8px;
+  --remove-btn-right: auto;
+  --remove-btn-left: 8px;
+}
+
+.remove-btn-top-center {
+  --remove-btn-top: 8px;
+  --remove-btn-right: auto;
+  --remove-btn-left: 50%;
+  transform: translateX(-50%);
+}
+
+.remove-btn-bottom-right {
+  --remove-btn-top: auto;
+  --remove-btn-bottom: 8px;
+  --remove-btn-right: 8px;
+}
+
+.remove-btn-large {
+  --remove-btn-size: 36px;
+  --remove-btn-icon-size: 20px;
+}
+
+.remove-btn-small {
+  --remove-btn-size: 20px;
+  --remove-btn-icon-size: 12px;
+}

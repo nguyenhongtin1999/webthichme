@@ -1,0 +1,283 @@
+/* Weather Widget Styles - Day Mode */
+.weather-widget {
+  display: none;
+  position: relative;
+  height: 90px;
+  width: 100%;
+  max-width: 280px;
+  background-color: #f17022;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 0 auto;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.weather-widget .Circle1 {
+  z-index: 100;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  right: -20px;
+  top: -30px;
+  border-radius: 50%;
+  background-color: rgba(253, 184, 19, 1);
+  animation: enlarge 5s infinite;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.weather-widget .Circle2 {
+  z-index: 80;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  right: -50px;
+  top: -70px;
+  border-radius: 50%;
+  background-color: rgba(246, 140, 31, 0.7);
+  animation: enlarge 7s infinite;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.weather-widget .Circle3 {
+  z-index: 50;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  right: -50px;
+  top: -100px;
+  border-radius: 50%;
+  background-color: rgba(241, 125, 45, 0.7);
+  animation: enlarge 10s infinite;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.weather-widget .sun {
+  z-index: 1000;
+  font-size: 15px !important;
+  transition: all 0.5s ease;
+}
+
+.weather-widget .moon {
+  z-index: 1000;
+  font-size: 15px !important;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  transition: all 0.5s ease;
+}
+
+.weather-widget .Condition {
+  z-index: 1000;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  left: 15px;
+  top: 8px;
+  color: #fff;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.weather-widget .Temp {
+  z-index: 1000;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  left: 15px;
+  bottom: 5px;
+  color: #fff;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.weather-widget #F {
+  z-index: 1000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 25px;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.weather-widget .Time {
+  z-index: 1000;
+  position: absolute;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  right: 15px;
+  top: 5px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.weather-widget .clock-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.9;
+  transition: all 0.5s ease;
+}
+
+.weather-widget .Date {
+  z-index: 1000;
+  position: absolute;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 200;
+  right: 15px;
+  top: 30px;
+  color: #fff;
+  opacity: 0.9;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.weather-widget .locationIcon {
+  z-index: 1000;
+  font-size: 10px !important;
+}
+
+.weather-widget .Location {
+  z-index: 1000;
+  position: absolute;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 200;
+  right: 15px;
+  bottom: 12px;
+  color: #fff;
+  max-width: 120px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Weather Widget Styles - Night Mode */
+body.dark-mode .weather-widget {
+  background: linear-gradient(135deg, #5b73e8 0%, #6b46c1 100%);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+}
+
+body.dark-mode .weather-widget.sparkle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 40px 70px, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(2px 2px at 130px 80px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 160px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 60px 20px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 200px 60px, #fff, transparent),
+    radial-gradient(1px 1px at 250px 40px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 80px 75px, #fff, transparent),
+    radial-gradient(2px 2px at 180px 15px, rgba(255, 255, 255, 0.9), transparent);
+  background-repeat: repeat;
+  background-size: 280px 90px;
+  animation: sparkle 2s linear infinite;
+  pointer-events: none;
+  border-radius: 10px;
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+body.dark-mode .weather-widget.sparkle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(1px 1px at 35px 45px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 120px 25px, #fff, transparent),
+    radial-gradient(1px 1px at 220px 70px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 70px 60px, #fff, transparent),
+    radial-gradient(2px 2px at 190px 45px, rgba(255, 255, 255, 0.9), transparent);
+  background-repeat: repeat;
+  background-size: 280px 90px;
+  animation: sparkle 3s linear infinite reverse;
+  pointer-events: none;
+  border-radius: 10px;
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* Activate sparkle effects when dark mode is active */
+body.dark-mode .weather-widget.sparkle::before,
+body.dark-mode .weather-widget.sparkle::after {
+  opacity: 1;
+}
+
+body.dark-mode .weather-widget .Circle1 {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(129, 140, 248, 0.7) 100%);
+  box-shadow: 0 0 25px rgba(129, 140, 248, 0.6);
+}
+
+body.dark-mode .weather-widget .Circle2 {
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.6) 0%, rgba(124, 58, 237, 0.4) 100%);
+  box-shadow: 0 0 35px rgba(124, 58, 237, 0.4);
+}
+
+body.dark-mode .weather-widget .Circle3 {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, rgba(79, 70, 229, 0.3) 100%);
+  box-shadow: 0 0 45px rgba(79, 70, 229, 0.3);
+}
+
+/* Keep same positioning as day mode, only change text effects */
+body.dark-mode .weather-widget .Condition {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .weather-widget .Temp {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .weather-widget .Time {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .weather-widget .Location {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.weather-loading {
+  animation: pulse 2s infinite;
+}
+
+@keyframes enlarge {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

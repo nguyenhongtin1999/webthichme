@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "name": "Bộ Xếp Hình Thông Minh",
+    "price": 750000,
+    "image": "https://picsum.photos/300/200?random=1",
+    "category": "Xếp Hình"
+  },
+  {
+    "id": 2,
+    "name": "Robot Lập Trình Cho Bé",
+    "price": 1200000,
+    "image": "https://picsum.photos/300/200?random=2",
+    "category": "Công Nghệ"
+  },
+  {
+    "id": 3,
+    "name": "Bảng Vẽ Điện Tử",
+    "price": 450000,
+    "image": "https://picsum.photos/300/200?random=3",
+    "category": "Công Nghệ"
+  },
+  {
+    "id": 4,
+    "name": "Kính Hiển Vi Mini",
+    "price": 350000,
+    "image": "https://picsum.photos/300/200?random=4",
+    "category": "Khoa Học"
+  },
+  {
+    "id": 5,
+    "name": "Bộ Thí Nghiệm Khoa Học",
+    "price": 550000,
+    "image": "https://picsum.photos/300/200?random=5",
+    "category": "Khoa Học"
+  },
+  {
+    "id": 6,
+    "name": "Đồ Chơi Lắp Ráp Mạch Điện",
+    "price": 680000,
+    "image": "https://picsum.photos/300/200?random=6",
+    "category": "Công Nghệ"
+  },
+  {
+    "id": 7,
+    "name": "Bộ Cờ Vua Điện Tử",
+    "price": 890000,
+    "image": "https://picsum.photos/300/200?random=7",
+    "category": "Phát Triển Trí Tuệ"
+  },
+  {
+    "id": 8,
+    "name": "Máy Tính Bỏ Túi Học Tập",
+    "price": 320000,
+    "image": "https://picsum.photos/300/200?random=8",
+    "category": "Phát Triển Trí Tuệ"
+  },
+  {
+    "id": 9,
+    "name": "Bộ Lego Robotics",
+    "price": 1500000,
+    "image": "https://picsum.photos/300/200?random=9",
+    "category": "Công Nghệ"
+  },
+  {
+    "id": 10,
+    "name": "Máy Tính Lập Trình Trẻ Em",
+    "price": 2200000,
+    "image": "https://picsum.photos/300/200?random=10",
+    "category": "Công Nghệ"
+  },
+  {
+    "id": 11,
+    "name": "Bộ Thí Nghiệm Hóa Học",
+    "price": 650000,
+    "image": "https://picsum.photos/300/200?random=11",
+    "category": "Khoa Học"
+  },
+  {
+    "id": 12,
+    "name": "Đàn Piano Điện Tử Học Tập",
+    "price": 980000,
+    "image": "https://picsum.photos/300/200?random=12",
+    "category": "Âm Nhạc"
+  },
+  {
+    "id": 13,
+    "name": "Bộ Xây Dựng Mô Hình 3D",
+    "price": 420000,
+    "image": "https://picsum.photos/300/200?random=13",
+    "category": "Xếp Hình"
+  },
+  {
+    "id": 14,
+    "name": "Máy Chiếu Sao Thông Minh",
+    "price": 780000,
+    "image": "https://picsum.photos/300/200?random=14",
+    "category": "Khoa Học"
+  },
+  {
+    "id": 15,
+    "name": "Bộ Học Toán Montessori",
+    "price": 560000,
+    "image": "https://picsum.photos/300/200?random=15",
+    "category": "Phát Triển Trí Tuệ"
+  },
+  {
+    "id": 16,
+    "name": "Robot Thú Cưng Thông Minh",
+    "price": 1350000,
+    "image": "https://picsum.photos/300/200?random=16",
+    "category": "Công Nghệ"
+  },
+  {
+    "id": 17,
+    "name": "Bộ Học Tiếng Anh Tương Tác",
+    "price": 690000,
+    "image": "https://picsum.photos/300/200?random=17",
+    "category": "Phát Triển Trí Tuệ"
+  },
+  {
+    "id": 18,
+    "name": "Máy Đọc Sách Điện Tử Trẻ Em",
+    "price": 850000,
+    "image": "https://picsum.photos/300/200?random=18",
+    "category": "Phát Triển Trí Tuệ"
+  },
+  {
+    "id": 19,
+    "name": "Bộ Thí Nghiệm Hóa Học Mini",
+    "price": 187500,
+    "original_price": 250000,
+    "discount_percent": 25,
+    "image": "https://picsum.photos/300/200?random=19",
+    "category": "Khoa Học"
+  },
+  {
+    "id": 20,
+    "name": "Kính Lúp Khoa Học Đa Năng",
+    "price": 135000,
+    "original_price": 180000,
+    "discount_percent": 25,
+    "image": "https://picsum.photos/300/200?random=20",
+    "category": "Khoa Học"
+  },
+  {
+    "id": 21,
+    "name": "Bộ Đồ Chơi Xếp Hình Gỗ",
+    "price": 112500,
+    "original_price": 150000,
+    "discount_percent": 25,
+    "image": "https://picsum.photos/300/200?random=21",
+    "category": "Xếp Hình"
+  }
+]

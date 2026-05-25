@@ -1,0 +1,148 @@
+/* Auto-generated split from hea.css on 2025-08-31T02:36:55 */
+/* Thêm CSS cho thanh cuộn ngang vào cuối file */
+
+/* Horizontal scrolling for discount tags */
+.tags-scroll-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tags-scroll-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px; /* Reduced gap from 8px to 4px to bring tags closer together */
+  overflow-x: auto;
+  padding: 4px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #e5e7eb transparent;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scroll-behavior: smooth; /* Smooth scrolling on supported browsers */
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.tags-scroll-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tags-scroll-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tags-scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #e5e7eb;
+  border-radius: 4px;
+}
+
+/* Show scrollbar on hover */
+.tags-scroll-wrapper:hover::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+}
+
+/* Add touch-friendly padding */
+.tags-scroll-wrapper {
+  padding: 4px 8px 4px 0;
+}
+
+/* Saved items filter buttons with compact design */
+.tags-scroll-container.saved-filter {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tags-scroll-container.saved-filter .tags-scroll-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2px;
+  overflow: hidden;
+  padding: 2px 0;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* Container for saved filter with reduced spacing */
+.saved-filter-container {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.saved-filter-wrapper {
+  position: relative;
+  background: #e5e7eb;
+  border-radius: 6px;
+  padding: 2px;
+  display: flex;
+  max-width: 180px;
+  margin: 0 auto;
+  height: 30px;
+}
+
+/* Compact button sizing */
+.saved-filter-btn {
+  flex: 1;
+  height: 26px;
+  padding: 0 6px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  white-space: nowrap;
+  position: relative;
+  z-index: 10;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Larger icon sizing */
+.saved-filter-btn i {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Compact text sizing */
+.saved-filter-btn span {
+  font-size: 13px;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+/* Active state */
+.saved-filter-btn.active {
+  color: white;
+}
+
+/* Inactive state */
+.saved-filter-btn:not(.active) {
+  color: #6b7280;
+}
+
+/* Compact slider positioning */
+#savedFilterSlider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(50% - 2px);
+  height: calc(100% - 4px);
+  background: #f97316;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Transform for video button */
+#savedFilterSlider.video-active {
+  transform: translateX(100%);
+}

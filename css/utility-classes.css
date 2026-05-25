@@ -1,0 +1,16 @@
+/* Utility Classes and Unique Styles */
+
+/* Added unique sideMenu style that was different from header.css */
+#sideMenu {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure full height */
+}
+
+#sideMenu nav {
+  flex-grow: 1;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
